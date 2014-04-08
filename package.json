@@ -1,0 +1,17 @@
+{
+  "name": "ExpandOBem",
+  "version": "0.0.1",
+  "description": "ExpandOBem is a preprocessing step for HTML that allows you to write BEM-style classes in a shorter, more expressive manner.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/ExpandOBem.js -R spec"
+  },
+  "author": "Ash",
+  "dependencies": {
+    "trumpet": "^1.6.3",
+    "lodash": "^2.4.1"
+  },
+  "devDependencies": {
+    "should": "^3.1.3"
+  }
+}
