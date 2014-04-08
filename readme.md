@@ -14,6 +14,8 @@ The result is cleaner, more readable source HTML and the speedier switching of m
 
 ## Install
 
+	npm install expandobem
+
 ## Usage
 
 ExpandOBem exposes three methods for processing HTML:

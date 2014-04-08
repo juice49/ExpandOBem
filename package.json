@@ -1,6 +1,10 @@
 {
-  "name": "ExpandOBem",
+  "name": "expandobem",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juice49/ExpandOBem.git"
+  },
   "description": "ExpandOBem is a preprocessing step for HTML that allows you to write BEM-style classes in a shorter, more expressive manner.",
   "main": "index.js",
   "scripts": {
