@@ -13,6 +13,19 @@ var
 
 
 
+module.exports = {
+	processFile: processFile,
+	processString: processString,
+	processStream: processStream,
+	expandClassAttr: expandClassAttr,
+	expandSingleClass: expandSingleClass,
+	parseClass: parseClass,
+	isBemClass: isBemClass
+};
+
+
+
+
 /**
  * Process File
  *
@@ -148,16 +161,3 @@ function parseClass(singleClass) {
 function isBemClass(singleClass) {
 	return (_.contains(singleClass, options.syntax.element) || _.contains(singleClass, options.syntax.modifier));
 }
-
-
-
-
-module.exports = {
-	processFile: processFile,
-	processString: processString,
-	processStream: processStream,
-	expandClassAttr: expandClassAttr,
-	expandSingleClass: expandSingleClass,
-	parseClass: parseClass,
-	isBemClass: isBemClass
-};
