@@ -54,12 +54,24 @@ The connecting syntax prefixing a modifier.
 
 ## Gulp
 
-Add link to Gulp plugin...
+You can use ExpandOBem directly in a Gulp pipeline using the [vinyl-transform](https://github.com/hughsk/vinyl-transform) plugin and ExpandOBem's `processStream` function.
+
+	var gulp = require('gulp');
+	var transform = require('vinyl-transform');
+	var expandobem = require('expandobem');
+	
+	gulp.src(['*.html'])
+		.pipe(transform(expandobem.processStream))
+		.pipe(gulp.dest('./build'));
 
 ## Todo
 
 - Find a way to integrate with Jade
 - Improve docs
+
+## License
+
+[MIT](http://opensource.org/licenses/MIT)
 
 ## Release notes
 
