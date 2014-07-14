@@ -8,7 +8,7 @@ ExpandOBem expands abbreviated BEM-style classes, like so:
 
 Becomes:
 
-	<div class='post--featured post--recent'></div>
+	<div class='post post--featured post--recent'></div>
 	
 The result is cleaner, more readable source HTML and the speedier switching of modifiers.
 
