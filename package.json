@@ -1,6 +1,6 @@
 {
   "name": "expandobem",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/juice49/ExpandOBem.git"
@@ -12,7 +12,7 @@
   },
   "author": "Ash",
   "dependencies": {
-    "trumpet": "^1.6.3",
+    "trumpet": "1.6.3",
     "lodash": "^2.4.1"
   },
   "devDependencies": {
