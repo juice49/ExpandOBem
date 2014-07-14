@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+	- "0.11"
+	- "0.10"
+deploy:
+  provider: npm
+  email: ashley@juice49.com
+  api_key:
+    secure: cu+SYJ4YPvic71tXqbs3K8XVaSxoBnOjk5qn8vsI3PHqzTqBR/RRB588kQRVtmVm4xAJqy1jVv1cCpCTLGot7hyXNnz86ZEnnwfbNoUGLa4YzKXod8CYJgCx4nHID/2Z6B9+tlvmrglFa4A/N9kFHrILBoQ1I3xjy3zwbui08OI=
+  on:
+    tags: true
+    repo: juice49/ExpandOBem
