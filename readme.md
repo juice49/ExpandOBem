@@ -2,6 +2,8 @@
 
 ![Travis CI](https://travis-ci.org/juice49/ExpandOBem.svg?branch=master)
 
+[![NPM](https://nodei.co/npm/expandobem.png?compact=true)](https://nodei.co/npm/expandobem/)
+
 ExpandOBem is a preprocessing step for HTML that allows you to write BEM-style classes in a shorter, more expressive manner.
 
 ExpandOBem expands abbreviated BEM-style classes, like so:
