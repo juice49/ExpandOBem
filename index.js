@@ -1,7 +1,8 @@
 var
 	fs = require('fs'),
 	stream = require('stream'),
-	_ = require('lodash'),
+	includes = require('amp-includes'),
+	merge = require('merge-deep'),
 	trumpet = require('trumpet'),
 	options = {
 		syntax: {
@@ -67,7 +68,7 @@ function processStream(userOptions) {
 
 	var tr = trumpet();
 
-	options = _.extend(options, userOptions);
+	options = merge(options, userOptions);
 
 	tr.selectAll('*', function(node) {
 		node.getAttribute('class', function(classAttr) {
@@ -161,5 +162,8 @@ function parseClass(singleClass) {
  * @return {Boolean} Whether the given class is BEM-style
  */
 function isBemClass(singleClass) {
-	return (_.contains(singleClass, options.syntax.element) || _.contains(singleClass, options.syntax.modifier));
+	return (
+		includes(singleClass, options.syntax.element) ||
+		includes(singleClass, options.syntax.modifier)
+	);
 }
