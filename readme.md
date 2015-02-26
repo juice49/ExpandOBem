@@ -13,7 +13,7 @@ ExpandOBem expands abbreviated BEM-style classes, like so:
 Becomes:
 
 	<div class='post post--featured post--recent'></div>
-	
+
 The result is cleaner, more readable source HTML and the speedier switching of modifiers.
 
 ## Install
@@ -39,7 +39,7 @@ Transform a string.
 ### Process Stream
 
 Transform streaming HTML.
-	
+
 	expandobem.processStream(options)
 
 ## Options
@@ -61,7 +61,7 @@ You can use ExpandOBem directly in a Gulp pipeline using the [vinyl-transform](h
 	var gulp = require('gulp');
 	var transform = require('vinyl-transform');
 	var expandobem = require('expandobem');
-	
+
 	gulp.src(['*.html'])
 		.pipe(transform(expandobem.processStream))
 		.pipe(gulp.dest('./build'));
@@ -74,11 +74,3 @@ You can use ExpandOBem directly in a Gulp pipeline using the [vinyl-transform](h
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
-
-## Release notes
-
-### 0.0.2 - 14/07/14
-Enforce Trumpet version 1.6.3. 1.6.4 seems to have a bug which means the stream is not ended (in this use case).
-
-### 0.0.1 - 08/04/14
-First release
