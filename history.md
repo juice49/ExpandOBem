@@ -1,6 +1,6 @@
 # History
 
-## Next
+## 0.0.4 - 26/02/15
 - Update Trumpet
 - Remove lodash dependency
 
