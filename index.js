@@ -44,17 +44,17 @@ function processFile(path, userOptions) {
  * @param {String} The string of HTML to process
  */
 function processString(string, userOptions) {
-	
+
 	var
 		inputStream = new stream.Readable(),
 		outputStream = processStream(userOptions);
-	
+
 	inputStream.push(string);
 	inputStream.push(null);
 	inputStream.pipe(outputStream);
 
 	return outputStream;
-	
+
 }
 
 
@@ -64,11 +64,11 @@ function processString(string, userOptions) {
  * Process Stream
  */
 function processStream(userOptions) {
-	
+
 	var tr = trumpet();
-	
+
 	options = _.extend(options, userOptions);
-	
+
 	tr.selectAll('*', function(node) {
 		node.getAttribute('class', function(classAttr) {
 			node.setAttribute('class', expandClassAttr(classAttr));
@@ -76,7 +76,7 @@ function processStream(userOptions) {
 	});
 
 	return tr;
-	
+
 }
 
 
@@ -95,13 +95,15 @@ function processStream(userOptions) {
  * @return {String} The entire class attribute with any BEM-style classes expanded
  */
 function expandClassAttr(classAttr) {
-	
+
+	if(!classAttr) return;
+
 	var classes = classAttr.split(' ');
-	
+
 	return classes.map(function(singleClass) {
 		return expandSingleClass(singleClass);
 	}).join(' ');
-	
+
 }
 
 
@@ -114,13 +116,13 @@ function expandClassAttr(classAttr) {
  * @return {String} A single class, expanded if it is BEM-style
  */
 function expandSingleClass(singleClass) {
-	
+
 	if(!isBemClass(singleClass)) return singleClass;
-	
+
 	var
 		components = parseClass(singleClass),
 		expandedClass = components.block;
-	
+
 	components.modifiers.forEach(function(modifier) {
 		expandedClass += ' ' + components.block + '--' + modifier;
 	});
