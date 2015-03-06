@@ -70,7 +70,7 @@ function processStream(userOptions) {
 
 	options = merge(options, userOptions);
 
-	tr.selectAll('*', function(node) {
+	tr.selectAll('[class]', function(node) {
 		node.getAttribute('class', function(classAttr) {
 			node.setAttribute('class', expandClassAttr(classAttr));
 		});
