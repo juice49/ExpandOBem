@@ -46,19 +46,19 @@ ExpandOBem exposes three methods for processing HTML:
 
 Read a file and transform it.
 
-`expandobem.processFile(path, options)``
+`expandobem.processFile(path, options)`
 
 #### Process String
 
 Transform a string.
 
-`expandobem.processString(string, options)``
+`expandobem.processString(string, options)`
 
 #### Process Stream
 
 Transform streaming HTML.
 
-`expandobem.processStream(options)``
+`expandobem.processStream(options)`
 
 ## Options
 
