@@ -1,5 +1,8 @@
 # History
 
+## Next
+- Add CLI
+
 ## 0.0.5 - 06/03/15
 - Fix for quirks that sometimes occur when used in combination with Jade ([Thomas Creeten](https://github.com/CREEATION))
 

@@ -8,39 +8,57 @@ ExpandOBem is a preprocessing step for HTML that allows you to write BEM-style c
 
 ExpandOBem expands abbreviated BEM-style classes, like so:
 
-	<div class='post--featured--recent'></div>
+`<div class='post--featured--recent'></div>`
 
 Becomes:
 
-	<div class='post post--featured post--recent'></div>
+`<div class='post post--featured post--recent'></div>`
 
 The result is cleaner, more readable source HTML and the speedier switching of modifiers.
 
 ## Install
 
-	npm install expandobem
+`npm install expandobem`
 
 ## Usage
 
+### CLI
+
+Install globally to use the CLI. ExpandOBem accepts an input file, or can use stdin. It'll either write to a file you specify or pipe to stdout.
+
+`expandobem input.html -o 'output.html'`
+
+#### Options
+
+````
+--element, -e   Element syntax
+--modifier, -m  Modifier syntax
+--outfile, -o   Write the ExpandOBem output to this file.
+                If unspecified, ExpandOBem pipes to stdout.
+--help, -h      Show help
+````
+
+### API
+
 ExpandOBem exposes three methods for processing HTML:
 
-### Process File
+#### Process File
 
 Read a file and transform it.
 
-	expandobem.processFile(path, options)
+`expandobem.processFile(path, options)``
 
-### Process String
+#### Process String
 
 Transform a string.
 
-	expandobem.processString(string, options)
+`expandobem.processString(string, options)``
 
-### Process Stream
+#### Process Stream
 
 Transform streaming HTML.
 
-	expandobem.processStream(options)
+`expandobem.processStream(options)``
 
 ## Options
 
@@ -52,24 +70,21 @@ The connecting syntax prefixing a modifier.
 
 ## Test
 
-	npm test
+`npm test`
 
 ## Gulp
 
 You can use ExpandOBem directly in a Gulp pipeline using the [vinyl-transform](https://github.com/hughsk/vinyl-transform) plugin and ExpandOBem's `processStream` function.
 
-	var gulp = require('gulp');
-	var transform = require('vinyl-transform');
-	var expandobem = require('expandobem');
+````
+var gulp = require('gulp');
+var transform = require('vinyl-transform');
+var expandobem = require('expandobem');
 
-	gulp.src(['*.html'])
-		.pipe(transform(expandobem.processStream))
-		.pipe(gulp.dest('./build'));
-
-## Todo
-
-- Find a way to integrate with Jade
-- Improve docs
+gulp.src([ '*.html' ])
+	.pipe(transform(expandobem.processStream))
+	.pipe(gulp.dest('./build'));
+````
 
 ## License
 
