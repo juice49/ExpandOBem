@@ -1,5 +1,8 @@
 # History
 
+## 0.1.1 - 10/06/15
+- Lock `merge-deep` version (latest has odd behaviour that results in an empty object). This is a temporary fix and I'd like to further investigate.
+
 ## 0.1.0 - 15/03/15
 - Add CLI
 
